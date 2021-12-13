@@ -19,6 +19,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Commit files
       run: |
-        echo ${{secrets.DEPLOY_PASSWORD}} | sudo -S chown -R $USER:$USER $PUBLISH_DIR
-        cd $PUBLISH_DIR
         git branch -r | wc -l 
